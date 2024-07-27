@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace LittleFunProjects
 {
-    public partial class Form1 : Form
+    public partial class Calculator : Form
     {
-        public Form1()
+        public Calculator()
         {
             InitializeComponent();
+        }
+
+        private void returnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.ShowDialog();
+            this.Close();
         }
     }
 }
