@@ -12,7 +12,7 @@ namespace LittleFunProjects
 {
     public partial class Pomodoro : Form
     {
-        int ticker
+        int ticker;
         public Pomodoro()
         {
             InitializeComponent();
