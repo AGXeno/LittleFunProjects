@@ -31,6 +31,7 @@
             this.calculatorBtn = new System.Windows.Forms.Button();
             this.quitBtn = new System.Windows.Forms.Button();
             this.mainMenuTitle = new System.Windows.Forms.Label();
+            this.pomodoroBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // calculatorBtn
@@ -65,11 +66,23 @@
             this.mainMenuTitle.TabIndex = 2;
             this.mainMenuTitle.Text = "Main Menu";
             // 
+            // pomodoroBtn
+            // 
+            this.pomodoroBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pomodoroBtn.Location = new System.Drawing.Point(64, 111);
+            this.pomodoroBtn.Name = "pomodoroBtn";
+            this.pomodoroBtn.Size = new System.Drawing.Size(99, 24);
+            this.pomodoroBtn.TabIndex = 3;
+            this.pomodoroBtn.Text = "Pomodoro";
+            this.pomodoroBtn.UseVisualStyleBackColor = true;
+            this.pomodoroBtn.Click += new System.EventHandler(this.pomodoroBtn_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(244, 265);
+            this.Controls.Add(this.pomodoroBtn);
             this.Controls.Add(this.mainMenuTitle);
             this.Controls.Add(this.quitBtn);
             this.Controls.Add(this.calculatorBtn);
@@ -85,5 +98,6 @@
         private System.Windows.Forms.Button calculatorBtn;
         private System.Windows.Forms.Button quitBtn;
         private System.Windows.Forms.Label mainMenuTitle;
+        private System.Windows.Forms.Button pomodoroBtn;
     }
 }

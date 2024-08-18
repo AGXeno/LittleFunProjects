@@ -36,9 +36,17 @@ namespace LittleFunProjects
             calculator.ShowDialog(); // Show Calculator
         }
 
-        private void Calc_FormClosed(object sender, FormClosedEventArgs e)
+        private void Calc_FormClosed(object sender, FormClosedEventArgs e) { this.Show(); }
+
+        // control for Pomodoro timer
+        private void pomodoroBtn_Click(object sender, EventArgs e)
         {
-            this.Show();
+            Pomodoro pomodoro = new Pomodoro();
+            pomodoro.FormClosed += new FormClosedEventHandler(Pomo_FormClosed);
+            this.Hide();
+            pomodoro.ShowDialog();
         }
+
+        private void Pomo_FormClosed(object sender, EventArgs e) { this.Show(); }
     }
 }
