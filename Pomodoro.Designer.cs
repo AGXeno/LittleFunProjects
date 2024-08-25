@@ -68,6 +68,7 @@
             this.pomoSettingsToolStripMenuItem.Name = "pomoSettingsToolStripMenuItem";
             this.pomoSettingsToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.pomoSettingsToolStripMenuItem.Text = "Pomo Settings";
+            this.pomoSettingsToolStripMenuItem.Click += new System.EventHandler(this.pomoSettingsToolStripMenuItem_Click);
             // 
             // PomoBtn
             // 
@@ -150,7 +151,7 @@
             // 
             this.MinuteDisplay.AutoSize = true;
             this.MinuteDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinuteDisplay.Location = new System.Drawing.Point(79, 118);
+            this.MinuteDisplay.Location = new System.Drawing.Point(67, 118);
             this.MinuteDisplay.Name = "MinuteDisplay";
             this.MinuteDisplay.Size = new System.Drawing.Size(183, 39);
             this.MinuteDisplay.TabIndex = 7;
@@ -170,7 +171,7 @@
             // 
             this.SecondDisplay.AutoSize = true;
             this.SecondDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondDisplay.Location = new System.Drawing.Point(339, 118);
+            this.SecondDisplay.Location = new System.Drawing.Point(356, 118);
             this.SecondDisplay.Name = "SecondDisplay";
             this.SecondDisplay.Size = new System.Drawing.Size(178, 39);
             this.SecondDisplay.TabIndex = 9;
@@ -180,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 310);
+            this.ClientSize = new System.Drawing.Size(609, 276);
             this.Controls.Add(this.SecondDisplay);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MinuteDisplay);
