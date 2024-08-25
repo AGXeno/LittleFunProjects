@@ -31,23 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pomoSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PomoBtn = new System.Windows.Forms.RadioButton();
+            this.ShortBreakBtn = new System.Windows.Forms.RadioButton();
+            this.LongBreakBtn = new System.Windows.Forms.RadioButton();
+            this.startBtn = new System.Windows.Forms.Button();
+            this.stopBtn = new System.Windows.Forms.Button();
+            this.resetBtn = new System.Windows.Forms.Button();
             this.countdown = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.MinuteDisplay = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.SecondDisplay = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.returnToMainMenuToolStripMenuItem});
+            this.returnToMainMenuToolStripMenuItem,
+            this.pomoSettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(609, 24);
@@ -61,85 +63,99 @@
             this.returnToMainMenuToolStripMenuItem.Text = "Return to Main Menu";
             this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.returnToMainMenuToolStripMenuItem_Click);
             // 
-            // radioButton1
+            // pomoSettingsToolStripMenuItem
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(47, 55);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(120, 29);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Pomodoro";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.pomoSettingsToolStripMenuItem.Name = "pomoSettingsToolStripMenuItem";
+            this.pomoSettingsToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.pomoSettingsToolStripMenuItem.Text = "Pomo Settings";
+            this.pomoSettingsToolStripMenuItem.Click += new System.EventHandler(this.pomoSettingsToolStripMenuItem_Click);
             // 
-            // radioButton2
+            // PomoBtn
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(229, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(133, 29);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Short Break";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.PomoBtn.AutoSize = true;
+            this.PomoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PomoBtn.Location = new System.Drawing.Point(47, 55);
+            this.PomoBtn.Name = "PomoBtn";
+            this.PomoBtn.Size = new System.Drawing.Size(120, 29);
+            this.PomoBtn.TabIndex = 1;
+            this.PomoBtn.TabStop = true;
+            this.PomoBtn.Text = "Pomodoro";
+            this.PomoBtn.UseVisualStyleBackColor = true;
+            this.PomoBtn.CheckedChanged += new System.EventHandler(this.PomoBtn_CheckedChanged);
             // 
-            // radioButton3
+            // ShortBreakBtn
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(428, 55);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(130, 29);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Long Break";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.ShortBreakBtn.AutoSize = true;
+            this.ShortBreakBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShortBreakBtn.Location = new System.Drawing.Point(229, 55);
+            this.ShortBreakBtn.Name = "ShortBreakBtn";
+            this.ShortBreakBtn.Size = new System.Drawing.Size(133, 29);
+            this.ShortBreakBtn.TabIndex = 2;
+            this.ShortBreakBtn.TabStop = true;
+            this.ShortBreakBtn.Text = "Short Break";
+            this.ShortBreakBtn.UseVisualStyleBackColor = true;
+            this.ShortBreakBtn.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // button1
+            // LongBreakBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(47, 205);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "START";
-            this.button1.UseVisualStyleBackColor = true;
+            this.LongBreakBtn.AutoSize = true;
+            this.LongBreakBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LongBreakBtn.Location = new System.Drawing.Point(428, 55);
+            this.LongBreakBtn.Name = "LongBreakBtn";
+            this.LongBreakBtn.Size = new System.Drawing.Size(130, 29);
+            this.LongBreakBtn.TabIndex = 3;
+            this.LongBreakBtn.TabStop = true;
+            this.LongBreakBtn.Text = "Long Break";
+            this.LongBreakBtn.UseVisualStyleBackColor = true;
+            this.LongBreakBtn.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // button2
+            // startBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(229, 205);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 35);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "STOP";
-            this.button2.UseVisualStyleBackColor = true;
+            this.startBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startBtn.Location = new System.Drawing.Point(47, 205);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(120, 35);
+            this.startBtn.TabIndex = 4;
+            this.startBtn.Text = "START";
+            this.startBtn.UseVisualStyleBackColor = true;
+            this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
-            // button3
+            // stopBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(428, 205);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 35);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "RESET";
-            this.button3.UseVisualStyleBackColor = true;
+            this.stopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stopBtn.Location = new System.Drawing.Point(229, 205);
+            this.stopBtn.Name = "stopBtn";
+            this.stopBtn.Size = new System.Drawing.Size(133, 35);
+            this.stopBtn.TabIndex = 5;
+            this.stopBtn.Text = "STOP";
+            this.stopBtn.UseVisualStyleBackColor = true;
+            this.stopBtn.Click += new System.EventHandler(this.stopBtn_Click);
+            // 
+            // resetBtn
+            // 
+            this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetBtn.Location = new System.Drawing.Point(428, 205);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(130, 35);
+            this.resetBtn.TabIndex = 6;
+            this.resetBtn.Text = "RESET";
+            this.resetBtn.UseVisualStyleBackColor = true;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // countdown
             // 
+            this.countdown.Interval = 1000;
             this.countdown.Tick += new System.EventHandler(this.countdown_Tick);
             // 
-            // label1
+            // MinuteDisplay
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 118);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 39);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "25 Minutes";
+            this.MinuteDisplay.AutoSize = true;
+            this.MinuteDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinuteDisplay.Location = new System.Drawing.Point(67, 118);
+            this.MinuteDisplay.Name = "MinuteDisplay";
+            this.MinuteDisplay.Size = new System.Drawing.Size(183, 39);
+            this.MinuteDisplay.TabIndex = 7;
+            this.MinuteDisplay.Text = "25 Minutes";
             // 
             // label2
             // 
@@ -151,30 +167,30 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "|";
             // 
-            // label3
+            // SecondDisplay
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(339, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 39);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "0 Seconds";
+            this.SecondDisplay.AutoSize = true;
+            this.SecondDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondDisplay.Location = new System.Drawing.Point(356, 118);
+            this.SecondDisplay.Name = "SecondDisplay";
+            this.SecondDisplay.Size = new System.Drawing.Size(178, 39);
+            this.SecondDisplay.TabIndex = 9;
+            this.SecondDisplay.Text = "0 Seconds";
             // 
             // Pomodoro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 310);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(609, 276);
+            this.Controls.Add(this.SecondDisplay);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.MinuteDisplay);
+            this.Controls.Add(this.resetBtn);
+            this.Controls.Add(this.stopBtn);
+            this.Controls.Add(this.startBtn);
+            this.Controls.Add(this.LongBreakBtn);
+            this.Controls.Add(this.ShortBreakBtn);
+            this.Controls.Add(this.PomoBtn);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Pomodoro";
@@ -190,15 +206,16 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem returnToMainMenuToolStripMenuItem;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton PomoBtn;
+        private System.Windows.Forms.RadioButton ShortBreakBtn;
+        private System.Windows.Forms.RadioButton LongBreakBtn;
+        private System.Windows.Forms.Button startBtn;
+        private System.Windows.Forms.Button stopBtn;
+        private System.Windows.Forms.Button resetBtn;
         private System.Windows.Forms.Timer countdown;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label MinuteDisplay;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label SecondDisplay;
+        private System.Windows.Forms.ToolStripMenuItem pomoSettingsToolStripMenuItem;
     }
 }
