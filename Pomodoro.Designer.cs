@@ -94,7 +94,7 @@
             this.ShortBreakBtn.TabStop = true;
             this.ShortBreakBtn.Text = "Short Break";
             this.ShortBreakBtn.UseVisualStyleBackColor = true;
-            this.ShortBreakBtn.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.ShortBreakBtn.CheckedChanged += new System.EventHandler(this.ShortBreakBtn_CheckedChanged);
             // 
             // LongBreakBtn
             // 

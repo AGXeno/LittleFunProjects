@@ -64,7 +64,7 @@ namespace LittleFunProjects {
 
             if (!string.IsNullOrEmpty(SetLongSec.Text))
             {
-                shortSeconds = SetShortSec.Text;
+                longSeconds = SetLongSec.Text;
             }
 
             this.DialogResult = DialogResult.OK;
