@@ -88,6 +88,12 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoodTracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoodTracker.Designer.cs">
+      <DependentUpon>MoodTracker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pomodoro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoodTracker.resx">
+      <DependentUpon>MoodTracker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pomodoro.resx">
       <DependentUpon>Pomodoro.cs</DependentUpon>

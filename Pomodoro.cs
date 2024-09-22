@@ -14,6 +14,7 @@ namespace LittleFunProjects
 {
     public partial class Pomodoro : Form
     {
+        private PomoSettings pomoSettings;
         private int defaultSeconds = 30;
         private int defaultMinutes = 15;
 
@@ -47,11 +48,6 @@ namespace LittleFunProjects
 
         }
 
-        // when countdown hits 0:00, let user know
-        private void EndSession()
-        {
-
-        }
 
         // sound when timer hits 0:00
         private void Sound_Alarm()
@@ -78,36 +74,6 @@ namespace LittleFunProjects
 
         }
 
-        private void ShortBreakBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            MinuteDisplay.Text = "7 Minutes";
-            SecondDisplay.Text = "30 Seconds";
-
-            defaultMinutes = 7;
-            defaultSeconds = 30;
-
-        }
-
-        // default settings for short break (forgot to change the name)
-        // check if settings have changed
-        private void shortBreakBtn(object sender, EventArgs e)
-        {
-            MinuteDisplay.Text = "7 Minutes";
-            SecondDisplay.Text = "30 Seconds";
-
-            defaultMinutes = 7;
-            defaultSeconds = 30;
-        }
-
-        // default settings for radio button long break (forgot to change the name)
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            MinuteDisplay.Text = "12 Minutes";
-            SecondDisplay.Text = "30 Seconds";
-
-            defaultMinutes = 12;
-            defaultSeconds = 30;
-        }
 
         // default settings for radio button pomodoro timer
         private void PomoBtn_CheckedChanged(object sender, EventArgs e)
@@ -118,6 +84,32 @@ namespace LittleFunProjects
             defaultMinutes = 15;
             defaultSeconds = 30;
         }
+
+        // default settings for radio button long break timer
+
+        private void LongBreakBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            MinuteDisplay.Text = "12 Minutes";
+            SecondDisplay.Text = "30 Seconds";
+
+            defaultMinutes = 12;
+            defaultSeconds = 30;
+        }
+
+
+        // default settings for radio button short break timer
+        // check if settings have changed
+
+        private void ShortBreakBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            MinuteDisplay.Text = "7 Minutes";
+            SecondDisplay.Text = "30 Seconds";
+
+            defaultMinutes = 7;
+            defaultSeconds = 30;
+
+        }
+
 
         private void startBtn_Click(object sender, EventArgs e) { countdown.Start(); }
 
@@ -130,7 +122,8 @@ namespace LittleFunProjects
 
             if (PomoBtn.Checked)
             {
-                MinuteDisplay.Text = "15 Minutes"; SecondDisplay.Text = "30 Seconds";
+                MinuteDisplay.Text = "15 Minutes"; 
+                SecondDisplay.Text = "30 Seconds";
             }
 
             else if (ShortBreakBtn.Checked)
@@ -184,7 +177,7 @@ namespace LittleFunProjects
 
                 }
 
-                catch (FormatException ex)
+                catch (FormatException)
                 {
                     MessageBox.Show($"An error occured for setting {name}: Please type in a number to set the timer.",
                         "Issue Setting Timer", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -194,7 +187,7 @@ namespace LittleFunProjects
 
         private void pomoSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PomoSettings pomoSettings = new PomoSettings();
+            pomoSettings = new PomoSettings();
             pomoSettings.FormClosed += new FormClosedEventHandler(Pomo_SettingClosed);
             this.Hide();
 
@@ -216,6 +209,7 @@ namespace LittleFunProjects
             }
         }
         private void Pomo_SettingClosed(object sender, EventArgs e) { this.Show(); }
+
 
     } 
 }
