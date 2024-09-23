@@ -87,14 +87,26 @@ namespace LittleFunProjects
 
         // default settings for radio button long break timer
 
-        private void LongBreakBtn_CheckedChanged(object sender, EventArgs e)
+            defaultMinutes = 7;
+            defaultSeconds = 30;
+        }
+
+        // default settings for radio button long break (forgot to change the name)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            MinuteDisplay.Text = "12 Minutes";
+            SecondDisplay.Text = "30 Seconds";
+        // default settings for radio button long break (forgot to change the name)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            MinuteDisplay.Text = "12 Minutes";
+            SecondDisplay.Text = "30 Seconds";
+        // default settings for radio button long break (forgot to change the name)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             MinuteDisplay.Text = "12 Minutes";
             SecondDisplay.Text = "30 Seconds";
 
-            defaultMinutes = 12;
-            defaultSeconds = 30;
-        }
 
 
         // default settings for radio button short break timer

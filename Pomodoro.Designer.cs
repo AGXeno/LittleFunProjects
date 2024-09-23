@@ -107,7 +107,6 @@
             this.LongBreakBtn.TabStop = true;
             this.LongBreakBtn.Text = "Long Break";
             this.LongBreakBtn.UseVisualStyleBackColor = true;
-            this.LongBreakBtn.CheckedChanged += new System.EventHandler(this.LongBreakBtn_CheckedChanged);
             // 
             // startBtn
             // 
