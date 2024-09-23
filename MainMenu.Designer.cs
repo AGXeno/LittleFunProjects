@@ -32,6 +32,7 @@
             this.quitBtn = new System.Windows.Forms.Button();
             this.mainMenuTitle = new System.Windows.Forms.Label();
             this.pomodoroBtn = new System.Windows.Forms.Button();
+            this.MoodTrackerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // calculatorBtn
@@ -48,7 +49,7 @@
             // quitBtn
             // 
             this.quitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quitBtn.Location = new System.Drawing.Point(64, 209);
+            this.quitBtn.Location = new System.Drawing.Point(64, 215);
             this.quitBtn.Name = "quitBtn";
             this.quitBtn.Size = new System.Drawing.Size(99, 31);
             this.quitBtn.TabIndex = 1;
@@ -77,11 +78,23 @@
             this.pomodoroBtn.UseVisualStyleBackColor = true;
             this.pomodoroBtn.Click += new System.EventHandler(this.pomodoroBtn_Click);
             // 
+            // MoodTrackerBtn
+            // 
+            this.MoodTrackerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoodTrackerBtn.Location = new System.Drawing.Point(50, 156);
+            this.MoodTrackerBtn.Name = "MoodTrackerBtn";
+            this.MoodTrackerBtn.Size = new System.Drawing.Size(133, 24);
+            this.MoodTrackerBtn.TabIndex = 4;
+            this.MoodTrackerBtn.Text = "Mood Tracker";
+            this.MoodTrackerBtn.UseVisualStyleBackColor = true;
+            this.MoodTrackerBtn.Click += new System.EventHandler(this.MoodTrackerBtn_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(244, 265);
+            this.ClientSize = new System.Drawing.Size(244, 271);
+            this.Controls.Add(this.MoodTrackerBtn);
             this.Controls.Add(this.pomodoroBtn);
             this.Controls.Add(this.mainMenuTitle);
             this.Controls.Add(this.quitBtn);
@@ -99,5 +112,6 @@
         private System.Windows.Forms.Button quitBtn;
         private System.Windows.Forms.Label mainMenuTitle;
         private System.Windows.Forms.Button pomodoroBtn;
+        private System.Windows.Forms.Button MoodTrackerBtn;
     }
 }

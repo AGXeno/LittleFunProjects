@@ -48,5 +48,15 @@ namespace LittleFunProjects
         }
 
         private void Pomo_FormClosed(object sender, EventArgs e) { this.Show(); }
+
+        private void MoodTrackerBtn_Click(object sender, EventArgs e)
+        {
+            MoodTracker moodTracker = new MoodTracker();
+            moodTracker.FormClosed += new FormClosedEventHandler(Mood_FormClosed);
+            this.Hide();
+            moodTracker.ShowDialog();
+        }
+
+        private void Mood_FormClosed(object sender, FormClosedEventArgs e) { this.Show(); }
     }
 }
