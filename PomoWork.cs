@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LittleFunProjects
 {
-    public partial class Pomodoro : Form
+    public partial class PomoWork : Form
     {
-        public Pomodoro()
+        public PomoWork()
         {
             InitializeComponent();
-        }
-
-        private void Start_SessionBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
