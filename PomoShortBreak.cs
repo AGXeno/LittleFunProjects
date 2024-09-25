@@ -16,5 +16,15 @@ namespace LittleFunProjects
         {
             InitializeComponent();
         }
+
+        private void WorkMinTimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void returnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

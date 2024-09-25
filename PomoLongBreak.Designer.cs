@@ -33,6 +33,13 @@
             this.WorkMinTimer = new System.Windows.Forms.Label();
             this.StopBtn = new System.Windows.Forms.Button();
             this.MotivateLbl = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.switchToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.workSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shortBreakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -64,9 +71,9 @@
             this.WorkMinTimer.ForeColor = System.Drawing.SystemColors.Control;
             this.WorkMinTimer.Location = new System.Drawing.Point(42, 83);
             this.WorkMinTimer.Name = "WorkMinTimer";
-            this.WorkMinTimer.Size = new System.Drawing.Size(53, 37);
+            this.WorkMinTimer.Size = new System.Drawing.Size(51, 37);
             this.WorkMinTimer.TabIndex = 7;
-            this.WorkMinTimer.Text = "25";
+            this.WorkMinTimer.Text = "15";
             // 
             // StopBtn
             // 
@@ -94,6 +101,53 @@
             this.MotivateLbl.TabIndex = 5;
             this.MotivateLbl.Text = "break time!";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(224, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.switchToToolStripMenuItem,
+            this.returnToMainMenuToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // switchToToolStripMenuItem
+            // 
+            this.switchToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.workSessionToolStripMenuItem,
+            this.shortBreakToolStripMenuItem});
+            this.switchToToolStripMenuItem.Name = "switchToToolStripMenuItem";
+            this.switchToToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.switchToToolStripMenuItem.Text = "Switch to..";
+            // 
+            // workSessionToolStripMenuItem
+            // 
+            this.workSessionToolStripMenuItem.Name = "workSessionToolStripMenuItem";
+            this.workSessionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.workSessionToolStripMenuItem.Text = "Work session";
+            // 
+            // shortBreakToolStripMenuItem
+            // 
+            this.shortBreakToolStripMenuItem.Name = "shortBreakToolStripMenuItem";
+            this.shortBreakToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.shortBreakToolStripMenuItem.Text = "Short break";
+            // 
+            // returnToMainMenuToolStripMenuItem
+            // 
+            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
+            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.returnToMainMenuToolStripMenuItem.Text = "Return to Main Menu";
+            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.returnToMainMenuToolStripMenuItem_Click);
+            // 
             // PomoLongBreak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,8 +159,12 @@
             this.Controls.Add(this.WorkMinTimer);
             this.Controls.Add(this.StopBtn);
             this.Controls.Add(this.MotivateLbl);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "PomoLongBreak";
             this.Text = "PomoLongBreak";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +177,11 @@
         private System.Windows.Forms.Label WorkMinTimer;
         private System.Windows.Forms.Button StopBtn;
         private System.Windows.Forms.Label MotivateLbl;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem switchToToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem workSessionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shortBreakToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnToMainMenuToolStripMenuItem;
     }
 }
