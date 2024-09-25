@@ -16,5 +16,10 @@ namespace LittleFunProjects
         {
             InitializeComponent();
         }
+
+        private void returnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

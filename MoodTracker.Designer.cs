@@ -70,6 +70,7 @@
             this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
             this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(132, 20);
             this.returnToMainMenuToolStripMenuItem.Text = "Return to Main Menu";
+            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.returnToMainMenuToolStripMenuItem_Click);
             // 
             // DateLbl
             // 
@@ -191,7 +192,6 @@
             this.Controls.Add(this.DateLbl);
             this.Controls.Add(this.MoodTrackerLabel);
             this.Controls.Add(this.MainMenuStrip);
-            this.MainMenuStrip = this.MainMenuStrip;
             this.Name = "MoodTracker";
             this.Text = "MoodTracker";
             this.MainMenuStrip.ResumeLayout(false);
